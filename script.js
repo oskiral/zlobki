@@ -15,7 +15,7 @@ async function fetchPage(pageNumber, type, retries = 3) {
   try {
     const res = await axios.get(URL, {
       params: { pageNumber, pageSize: SIZE, listaRejestrType: type },
-      timeout: 10000
+      timeout: 60000
     });
     return res.data;
   } catch (err) {
